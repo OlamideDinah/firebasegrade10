@@ -1,0 +1,83 @@
+
+
+
+<head>
+    <link rel="stylesheet" href="topic2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand  sticky-top bg-dark bg-transparent "> <!-- they chunk un top when screen is small!-->
+    <ul class="navbar-nav"> <!--  Part of creating a navbar <!-->
+      <li class="nav-item">  <!-- one of the navbar boxes<!-->
+        <a class="nav-link text-nav" href="topic1.html">IB News</a><!-- Where the actual text and redirection site location go. <!-->
+      </li>
+      <li class="nav-item">  <!-- one of the navbar boxees<!-->
+        <a class="nav-link text-dark" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-nav" href="topic3.html">IB Advice</a>
+      </li>
+    </ul>
+  </nav> <!-- <!-->
+
+<main class="container">
+    <section class="message-board">
+      <h1 class = "text-dark">IB Classes Discussion</h1>
+      <div id="load-data" class = "load-data">
+        <p>Loading...</p>
+      </div>
+    </section>
+    <section class="type-message box-shadow">
+      <h1 class="text-dark">Reply</h1>
+      <form>
+        <div class="p-1 green-sheen">
+          <input type="text" placeholder="Nickname" id="nickname" required />
+        </div>
+        <div class="p-1 teal-blue">
+          <textarea placeholder="Enter message here..." id="message" required></textarea>
+        </div>
+        <div class="cambridge-blue inline-block position-right">
+          <button type="submit" class="text-dark">POST</button>
+        </div>
+        <div class="tangerine inline-block position-left">
+          <button type="submit" id="delete" class="text-dark">Delete</button>
+        </div>
+      </form>
+      
+      <div class="error-message">
+        <p>Error! Please fill in all the fields.</p>
+        <span class="close position-right">&times;</span>
+      </div>
+    </section>
+  </main>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyB9Ifw13vBtG5MjlkAc3In3TpWY0I3tCuw",
+    authDomain: "coding-unit-2.firebaseapp.com",
+    projectId: "coding-unit-2",
+    storageBucket: "coding-unit-2.appspot.com",
+    messagingSenderId: "361974026597",
+    appId: "1:361974026597:web:1e62686482c1a60e07d18c",
+    measurementId: "G-1V6J9Z6WLB"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script defer src = 'topic2.js'></script>

@@ -1,0 +1,98 @@
+
+.navbar{/*  Specifying the font in the navbar*/
+  font-family: 'B612', sans-serif;
+  font-size:1.15em;
+}
+
+/*
+aboute em's
+---------
+typically an em if inherited from the font size value
+if font is 20px - 1 em is 20 px
+however it seems that in bs4 its automatically 16px?
+*/
+
+html {
+  font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
+.lg{
+  width:150px;
+}
+
+/* for the sick backgorund image */
+
+.background {
+  background-image:url('https://cdn.pixabay.com/photo/2017/05/19/06/22/desktop-2325627_960_720.jpg');
+  height: 100%;
+  opacity:1;
+  /* Centering and scaling the image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pad{
+  padding:50px;
+}
+
+.text-banner-1{ /* the banner for the title page */
+ font-family: 'Inter', sans-serif;
+ position:absolute;
+ display:flex;
+ left:45%;
+ color:black;
+ font-size:4vw;
+ top:39%;
+
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  }
+
+@media (min-width: 768px) { /* 768 */
+  .banner-image { /* the image for the section rihgt below the title page */
+    background-image:url('https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009_960_720.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+/* utilize viewport width */
+@media (min-width: 768px) { /* 768 */
+.text-box{
+  font-family: 'Inter', sans-serif;
+  font-size:3vw;
+  margin:10% 10%;
+  }
+}
+
+@media (max-width: 768px) { /* if the screen gets to small, no margins for text */
+.text-box {
+  font-family: 'Inter', sans-serif;
+  font-size:3vw;
+  position:absolute;
+  margin: 10% 10%;
+  }
+}
