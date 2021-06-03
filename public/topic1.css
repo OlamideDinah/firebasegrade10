@@ -82,7 +82,7 @@ article:last-of-type { margin-bottom: 3rem; }
   /* to move the area below the box-shadow */
   position: relative;
   z-index: -1;
-  /* to align the meta data to the right */
+  /* to align thedata to the right */
   float: right;
   margin-top: 0.15rem;
 }
@@ -135,13 +135,12 @@ button { font-weight: 400; }
   h1 { margin-top: 0; }
 }
 
-/* Small screen changes */
 
-@media all and (max-width: 567px) {
+@media all and (max-width: 567px) { /* Code for when the screen shrinks */
   .position-right { position: relative; }
   textarea,
   input,
   button { width: 100%; }
   .inline-block { display: block; }
-  button { padding: 1rem; }
+  button { padding: 1rem; } 
 }
