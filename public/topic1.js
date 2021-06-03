@@ -1,8 +1,4 @@
 
-
-// Initialize Firebase
-
-
 // Initialize Cloud Firestore through Firebase
 const db = firebase.firestore();
 const settings = {
@@ -30,7 +26,6 @@ db.settings(settings);
         })
         .then(docRef => {
           console.log("Document written with ID: ", docRef.id);
-          // window.location.reload();
         })
         .catch(error => {
           console.error("Error adding document: ", error);
