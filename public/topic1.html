@@ -27,9 +27,9 @@
             <a class="nav-link text-nav" href="topic3.html">IB Advice</a>
           </li>
         </ul>
-      </nav> <!-- <!-->
+      </nav> <!-- end of the navbar <!-->
 
-<main class="container">
+<main class="container"> <!-- the discussion board and commenting system !-->
     <section class="message-board">
       <h1 class="text-dark">IB News</h1>
       <div id="load-data" class = "load-data">
@@ -48,12 +48,12 @@
         <div class="cambridge-blue inline-block position-right">
           <button type="submit" class="text-dark" >POST</button>
         </div>
-        <div class="tangerine inline-block position-left">
+        <div class="tangerine inline-block position-left"> 
           <button type="submit" id="delete" class="text-dark">Delete</button>
         </div>
       </form>
       
-      <div class="error-message">
+      <div class="error-message"> <!-- error message popup !-->
         <p>Error! Please fill in all the fields.</p>
         <span class="close position-right">&times;</span>
       </div>
@@ -66,7 +66,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
 <script>
 
-  var firebaseConfig = {
+  var firebaseConfig = { <!-- Loading all firebase files before running my script!-->
     apiKey: "AIzaSyB9Ifw13vBtG5MjlkAc3In3TpWY0I3tCuw",
     authDomain: "coding-unit-2.firebaseapp.com",
     projectId: "coding-unit-2",
